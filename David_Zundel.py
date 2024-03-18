@@ -5,6 +5,12 @@ def encode(password1):
         new_password += str(int(char)+3)
     return new_password
 
+#Aiden Blackwood
+def decode(password):
+    decoded_password = ""
+    for char in password:
+        decoded_password += str(int(char) - 3)
+    return decoded_password
 
 password = ""
 cont = True
@@ -17,8 +23,8 @@ while cont:
         print("Your password has been encoded and stored!\n")
     elif option == 2:
         pass
-        # decoded_pass = decode(password)
-        # print(f"The encoded password is {password}, and the original password is {decoded_pass}.\n")
+        decoded_pass = decode(password)
+        print(f"The encoded password is {password}, and the original password is {decoded_pass}.\n")
     else:
         break
 
