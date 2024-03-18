@@ -2,14 +2,20 @@
 def encode(password1):
     new_password = ""
     for char in password1:
-        new_password += str(int(char)+3)
+        res = int(char) + 3
+        if res > 9:
+            res -= 10
+        new_password += str(res)
     return new_password
 
 #Aiden Blackwood
 def decode(password):
     decoded_password = ""
     for char in password:
-        decoded_password += str(int(char) - 3)
+        res = int(char) - 3
+        if res < 0:
+            res += 10
+        decoded_password += str(res)
     return decoded_password
 
 password = ""
