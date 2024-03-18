@@ -22,7 +22,6 @@ while cont:
         password = encode(temporary)
         print("Your password has been encoded and stored!\n")
     elif option == 2:
-        pass
         decoded_pass = decode(password)
         print(f"The encoded password is {password}, and the original password is {decoded_pass}.\n")
     else:
